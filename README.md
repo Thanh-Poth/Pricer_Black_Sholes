@@ -48,12 +48,12 @@ By correcting the naive assumption of constant volatility, the Hybrid Model sign
 
 ## 🛠️ Installation & Usage
 
-2.  **Libraries**
+1.  **Libraries**
     ```bash
     pip install -r requirements.txt
     ```
 
-3.  **Run the script**
+2.  **Run the script**
     ```bash
     python main.py
     ```
