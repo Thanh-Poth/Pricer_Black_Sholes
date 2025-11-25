@@ -1,4 +1,4 @@
-# ⚡ Hybrid Option Pricer: Black-Scholes + Machine Learning
+# Hybrid Option Pricer: Black-Scholes + Machine Learning
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Finance](https://img.shields.io/badge/Quantitative-Finance-green)
