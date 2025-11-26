@@ -1,24 +1,19 @@
 # Hybrid Option Pricer: Black-Scholes + Machine Learning
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![Finance](https://img.shields.io/badge/Quantitative-Finance-green)
-![ML](https://img.shields.io/badge/Machine-Learning-orange)
-![Status](https://img.shields.io/badge/Status-Educational-yellow)
-
-## 📖 Overview
+## Overview
 
 This project implements a **Hybrid Pricing Engine** for European Options. It combines the rigorous mathematical foundation of the **Black-Scholes-Merton (BSM)** model with the predictive power of **Machine Learning (Random Forest)** to correct market biases (such as the Volatility Smile).
 
 The goal is to demonstrate how a data-driven approach can improve pricing accuracy by predicting the "spread" between the theoretical BSM price and the real Market price.
 
-## 🚀 Key Features
+## Key Features
 
 * **Black-Scholes Engine:** Vectorized implementation of the BSM formula including Greeks calculation ($\Delta, \Gamma, \nu, \Theta, \rho$).
 * **Volatility Solver:** Implementation of the **Newton-Raphson** algorithm to reverse-engineer Implied Volatility from market prices.
 * **Real-Time Data Pipeline:** Automated fetching of option chains (Calls/Puts) using the `yfinance` API.
 * **Hybrid ML Model:** Uses a **Random Forest Regressor** to predict the pricing error of a naive BSM model (Flat Volatility) and correct it.
 
-## 🧮 Mathematical Background
+## Mathematical Background
 
 ### 1. The Pricing Formula
 The theoretical price is calculated using the standard BSM equation:
@@ -33,7 +28,7 @@ $$Price_{Hybrid} = Price_{BS\_Naive}(\sigma_{mean}) + \epsilon_{ML}(Strike, Mone
 
 Where $\epsilon_{ML}$ is the error term predicted by the Random Forest model.
 
-## 📊 Results
+## Results
 
 The model was tested on **NVDA** (NVIDIA) option chains.
 By correcting the naive assumption of constant volatility, the Hybrid Model significantly reduces the Mean Squared Error (MSE).
@@ -46,16 +41,4 @@ By correcting the naive assumption of constant volatility, the Hybrid Model sign
 
 *(Results may vary depending on real-time market data).*
 
-## 🛠️ Installation & Usage
-
-1.  **Libraries**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-2.  **Run the script**
-    ```bash
-    python main.py
-    ```
-
-## 📂 Project Structure
+![Results](output.png)
